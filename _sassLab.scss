@@ -1,0 +1,123 @@
+// Mobile First Break Points
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+//variabels
+    $blue: #007bff;
+    $indigo: #6610f2;
+    $purple: #6f42c1;
+    $pink: #e83e8c;
+    $red: #dc3545;
+    $orange: #fd7e14;
+    $yellow: #ffc107;
+    $green: #28a745;
+    $teal: #20c997;
+    $cyan: #17a2b8;
+    $white: #fff;
+    $gray: #6c757d;
+    $gray-dark: #343a40;
+
+
+    $primary: #007bff;
+    $secondary: #6c757d;
+    $success: #28a745;
+    $info: #17a2b8;
+    $warning: #ffc107;
+    $danger: #dc3545;
+    $light: #f8f9fa;
+    $dark: #151515;
+
+
+    //mixin
+    @mixin form-control {
+        display: block;
+        width: 100%;
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #212529;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border-radius: 0.25rem;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+        &:focus {
+            color: #212529;
+            background-color: #fff;
+            border-color: #86b7fe;
+            outline: 0;
+            box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+          };
+
+          &::placeholder {
+            color: #6c757d;
+            opacity: 1;
+          };
+
+      };
+
+        @mixin btn-primary {
+            display: inline-block;
+            font-weight: 400;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            border: 1px solid transparent;
+            padding: .375rem .75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            border-radius: .25rem;  
+            color: #fff;
+            background-color: #007bff;
+            border-color: #007bff;
+            text-decoration: none;
+        };
+
+        @mixin hideScrollbar {
+            &::-webkit-scrollbar {
+              width: 0 !important
+            }
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+          };
+
+        @mixin btn-default($bg:#6c757d, $color:#fff) {
+            display: inline-block;
+            font-weight: 400;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            border: 1px solid transparent;
+            padding: .375rem .75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            border-radius: .25rem;  
+            color: $color;
+            background-color: $bg;
+            border-color: $bg;
+            text-decoration: none;
+        };
+
+    
+        @mixin flex ($dir:row, $justify:space-evenly, $align:center) {
+            display: flex;
+            flex-direction: $dir;
+            justify-content: $justify;
+            align-items: $align;
+        };
