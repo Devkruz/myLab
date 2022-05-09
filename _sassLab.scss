@@ -5,6 +5,8 @@ $lg: 992px;
 $xl: 1200px;
 $xxl: 1400px;
 
+// No more
+
 //variabels
     $blue: #007bff;
     $indigo: #6610f2;
@@ -64,25 +66,30 @@ $xxl: 1400px;
 
       };
 
-        @mixin btn-primary {
-            display: inline-block;
-            font-weight: 400;
-            text-align: center;
-            white-space: nowrap;
-            vertical-align: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-            border: 1px solid transparent;
-            padding: .375rem .75rem;
-            font-size: 1rem;
-            line-height: 1.5;
-            border-radius: .25rem;  
-            color: #fff;
-            background-color: #007bff;
-            border-color: #007bff;
-            text-decoration: none;
+        @mixin btn-stroke($bg:#212529,$color:#bbb) {
+          display: inline-block;
+          font-weight: 400;
+          text-align: center;
+          white-space: nowrap;
+          vertical-align: middle;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+          border: 1px solid transparent;
+          padding: .375rem .75rem;
+          font-size: 1rem;
+          line-height: 1.5;
+          border-radius: .25rem;  
+          color: $bg;
+          background-color:transparent;
+          border-color: $bg;
+          text-decoration: none;
+          &:hover {
+            background: $bg;
+            color:$color;
+          }
+          
         };
 
         @mixin hideScrollbar {
@@ -93,7 +100,7 @@ $xxl: 1400px;
             scrollbar-width: none;
           };
 
-        @mixin btn-default($bg:#6c757d, $color:#fff) {
+        @mixin btn($bg:#6c757d, $color:#fff) {
             display: inline-block;
             font-weight: 400;
             text-align: center;
@@ -112,6 +119,9 @@ $xxl: 1400px;
             background-color: $bg;
             border-color: $bg;
             text-decoration: none;
+            &:hover {
+                 background-color:rgba($bg, 0.85) 
+            }
         };
 
     
